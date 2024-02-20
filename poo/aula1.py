@@ -3,7 +3,6 @@ from contato import  Contato
 from endereco import  Endereco
 class Conta:
 
-
     n_contas=1
 # public
 # private  self.__<nome do atributo>
@@ -51,7 +50,9 @@ class Conta:
     def add_n_conta(cls):
         cls.n_contas+=1
 
-
+    @staticmethod
+    def somar(n1,n2):
+        print(f"Soma é {n1+n2}")
 
 class ContaCorrente(Conta):
 
@@ -99,7 +100,7 @@ conta2=Conta(usuario2,2000)
 
 conta3=Conta(usuario2,2000)
 
-
+conta1.somar(2,4)
 
 
 print(conta1.n_conta)
