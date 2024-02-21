@@ -1,4 +1,4 @@
-from flet import Page,app,TextField,ElevatedButton,ResponsiveRow,WEB_BROWSER
+from flet import Page,app,TextField,ElevatedButton,ResponsiveRow,WEB_BROWSER,MainAxisAlignment
 
 btnsInputs={"":12,"sm":6,"md":4,"lg":2}
 
@@ -9,7 +9,7 @@ def minhaAplicacao(page:Page):
     inputCPF = TextField( col=btnsInputs,label=" Digite a seu CPF")
     btnRegister=ElevatedButton("Cadastrar")
 
-    responsiveLine=ResponsiveRow(controls=[inputName,inputIdade,inputCPF])
+    responsiveLine=ResponsiveRow(controls=[inputName,inputIdade,inputCPF],alignment=MainAxisAlignment.CENTER)
     page.add(responsiveLine,btnRegister)
 
     page.update()
